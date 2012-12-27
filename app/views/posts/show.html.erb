@@ -1,0 +1,23 @@
+<h1><%= @post.title %></h1>
+<div class="entry">
+	<%= @post.body %>
+</div>
+
+<h2>Tags</h2>
+
+<%= join_tags(@post) %>
+
+<h2>Comments</h2>
+
+<% @post.comments.each do |comment| %>
+	<p>By: <%= comment.commenter %></p>
+	<div class="comment">
+		<%= comment.body %>
+	</div>
+	<p>
+		<%= button_to "Delete", [@post, comment], 
+			confirm: 'Are you sure?', method: :delete %>
+	</p>
+<% end %>
+
+<%= render "comments/form" %>
