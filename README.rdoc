@@ -14,9 +14,10 @@ Run with <tt>cd blogin15; rails server</tt>
 
 Here are the commands invoked along the way as I walked through the tutorial:
 
-<tt>
-rails new blogin15
-rails generate resource post title:string body:text   
-rails generate resource comment commenter:string body:text post:references
-rails generate model tag name:string post:references
-</tt>
+<tt>rails new blogin15</tt>
+
+<tt>rails generate resource post title:string body:text</tt>
+
+<tt>rails generate resource comment commenter:string body:text post:references</tt>
+
+<tt>rails generate model tag name:string post:references</tt>
